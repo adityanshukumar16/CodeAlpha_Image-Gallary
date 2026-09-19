@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #333;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* Gallery */
+
+.gallery {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.image-box {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+
+.image-box img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+
+/* Lightbox */
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 70%;
+    max-height: 80%;
+}
+
+
+/* Close button */
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    color: white;
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+
+/* Previous and Next buttons */
+
+.prev,
+.next {
+    position: absolute;
+
+    top: 50%;
+
+    background-color: white;
+    border: none;
+
+    padding: 15px;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.prev {
+    left: 30px;
+}
+
+.next {
+    right: 30px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #ddd;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .image-box img {
+        height: 250px;
+    }
+
+}

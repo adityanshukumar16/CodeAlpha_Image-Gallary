@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore beautiful images</p>
+    </header>
+
+    <main>
+
+        <!-- Gallery -->
+        <div class="gallery">
+
+            <div class="image-box">
+                <img src="https://picsum.photos/id/1015/500/350"
+                     onclick="openImage(this.src)">
+            </div>
+
+            <div class="image-box">
+                <img src="https://picsum.photos/id/1016/500/350"
+                     onclick="openImage(this.src)">
+            </div>
+
+            <div class="image-box">
+                <img src="https://picsum.photos/id/1025/500/350"
+                     onclick="openImage(this.src)">
+            </div>
+
+            <div class="image-box">
+                <img src="https://picsum.photos/id/1035/500/350"
+                     onclick="openImage(this.src)">
+            </div>
+
+            <div class="image-box">
+                <img src="https://picsum.photos/id/1043/500/350"
+                     onclick="openImage(this.src)">
+            </div>
+
+            <div class="image-box">
+                <img src="https://picsum.photos/id/1069/500/350"
+                     onclick="openImage(this.src)">
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+
+        <span class="close" onclick="closeImage()">&times;</span>
+
+        <button class="prev" onclick="previousImage()">&#10094;</button>
+
+        <img id="largeImage">
+
+        <button class="next" onclick="nextImage()">&#10095;</button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
